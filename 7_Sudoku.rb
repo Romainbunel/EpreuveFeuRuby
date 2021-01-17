@@ -77,6 +77,14 @@ def isResolu(sudoku)
 end
 
 def renduSudoku(sudoku) #Mise en forme finale et affichage
+    sudoku.each{ |line|
+        line.insert(3,'|')
+        line.insert(7,'|')
+    }
+    
+    sudoku.insert(3,'---+---+---')
+    sudoku.insert(7,'---+---+---')
+    
     puts sudoku
 end
 
